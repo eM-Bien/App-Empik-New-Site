@@ -1,0 +1,593 @@
+<style>
+    /* opinion */
+    .app-opinion-container {
+        position: relative;
+        background-color: #FEF3F5;
+        z-index: 5;
+    }
+
+    .app-opinion {
+        position: relative;
+        margin: -95px auto 0;
+        padding: 56px;
+        max-width: 1440px;
+    }
+
+    .app-opinion__title {
+        margin-bottom: 32px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #242424;
+    }
+
+    .app-opinion__title--mobile {
+        display: none;
+    }
+
+    .app-opinion__circle-mobile {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 32px;
+        padding: 27px;
+        width: 144px;
+        height: 144px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    .app-opinion__circle-mobile__text {
+        font-size: 36px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .app-opinion__circle-mobile__text--small {
+        margin-left: 5px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .app-opinion__circle-mobile__stars {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+
+    .app-opinion__circle-mobile__star {
+        margin: 0 2px;
+    }
+
+    .app-opinion__boxes {
+        display: flex;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+    }
+
+    .app-opinion__boxes::-webkit-scrollbar {
+        display: none;
+    }
+
+    .app-opinion__boxes__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 16px;
+        padding: 32px 32px 25px;
+        width: 432px;
+        min-height: 238px;
+        border-radius: 8px;
+        border: 1px solid #E7E7E7;
+        background-color: #fff;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .app-opinion__boxes__item__text {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000;
+    }
+
+    .app-opinion__boxes__item-bottom__sign {
+        font-size: 16px;
+        line-height: 24px;
+        color: #6F6F6F;
+    }
+
+    .app-opinion__boxes__item-bottom__stars {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+    }
+
+    .app-opinion__boxes__item-bottom__star {
+        margin-right: 7px;
+    }
+
+    .app-opinion__boxes__item-bottom__number {
+        margin-top: 5px;
+        font-size: 16px;
+        color: #242424;
+    }
+
+    /* arrows */
+    .app-opinion-arrow-bg {
+        position: absolute;
+        bottom: 0;
+        width: 208px;
+        height: 80%;
+    }
+
+    .app-opinion-arrow-bg--right {
+        right: 0;
+        background: linear-gradient(269.6deg, #FEF3F5 35.19%, rgba(255, 255, 255, 0) 100.6%);
+    }
+
+    .app-opinion-arrow-bg--left {
+        left: 0;
+        background: linear-gradient(90deg, #FEF3F5 35.19%, rgba(255, 255, 255, 0) 100.6%);
+    }
+
+    .app-opinion-arrow-bg--disabled {
+        display: none;
+    }
+
+    .app-opinion-arrow {
+        position: absolute;
+        top: 57%;
+        transform: translateY(-50%);
+        padding: 10px 0 0 18px;
+        width: 40px;
+        height: 40px;
+        background-size: 14px 20px;
+        background-color: #242424;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        border-radius: 50%;
+    }
+
+    .app-opinion-arrow:hover {
+        cursor: pointer;
+    }
+
+    .app-opinion-arrow--prev {
+        left: 5px;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .app-opinion-arrow--next {
+        right: 0;
+    }
+
+    .app-opinion-arrow--disabled {
+        pointer-events: none;
+        display: none;
+    }
+
+    .app-opinion-arrow__img {
+        width: 7.5px;
+        height: 15px;
+    }
+
+    @media (max-width: 720px) {
+        .app-opinion {
+            padding: 40px 0 0 16px;
+        }
+
+        .app-opinion__title--desktop {
+            display: none;
+        }
+
+        .app-opinion__title--mobile {
+            display: block;
+            font-size: 24px;
+        }
+
+        .app-opinion__circle-mobile {
+            display: flex;
+        }
+
+        .app-opinion__boxes {
+            padding-bottom: 32px;
+        }
+
+        .app-opinion__boxes__item {
+            max-width: 309px;
+            padding: 32px 24px;
+            border: none;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        }
+
+        .app-opinion__boxes__item-bottom__stars {
+            margin-top: 2px;
+        }
+
+        .app-opinion-arrow-bg {
+            display: none;
+        }
+
+        .app-opinion-arrow {
+            display: none;
+        }
+    }
+</style>
+
+<section class="app-opinion-container" id="opinion">
+    <div class="app-opinion">
+        <h2 class="app-opinion__title app-opinion__title--desktop">Ponad 149 tysięcy opinii i ocena 4,9 / 5</h2>
+        <h2 class="app-opinion__title app-opinion__title--mobile">Ponad 149 tysięcy opinii</h2>
+        <div class="app-opinion__circle-mobile">
+            <div class="app-opinion__circle-mobile__text">
+                <span class="app-opinion__circle-mobile__text">4,9</span><span class="app-opinion__circle-mobile__text app-opinion__circle-mobile__text--small">/5</span>
+            </div>
+
+            <div class="app-opinion__circle-mobile__stars">
+                <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__circle-mobile__star">
+                <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__circle-mobile__star">
+                <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__circle-mobile__star">
+                <img src="https://media.empik.com/content/lps/app-2022/opinion/Star_half.svg" alt="złota gwiazdka" class="app-opinion__circle-mobile__star">
+                <img src="https://media.empik.com/content/lps/app-2022/opinion/empty-star.svg" alt="złota gwiazdka" class="app-opinion__circle-mobile__star">
+            </div>
+        </div>
+
+        <div class="app-opinion__boxes">
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Rewelacyjna apka, zoszczędziłem kupę chajsu dzięki premium, jestem w stanie wyszukać i zarezerwować białe kruki (komiksy) itp,polecam</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Rafal Jastalski</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Prosta w obsłudze, przejrzysta, wręcz intuicyjna. Szybko można znaleźć świetne książki. Rewelacyjne recenzje pomagają podjąć właściwe decyzje. Momentalnie można dokonać płatności i odebrać książki tam gdzie nam wygodnie. Dodatkowy plus możliwość śledzenia postępów w zamówieniu oraz historia zamówień. Nie pamiętasz co kupiłeś na prezent w zeszłym roku , nie ma problemu zawsze możesz sprawdzić zrealizowane zamówienia. No i wiesz jaką część książki kupić w tym roku ;). Polecam</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Frika 636</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Intuicyjna i prosta.. a najważniejsze to ma pojemny koszyk ;-)</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Aleksandra Binkowska</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Bardzo przyjazna aplikacja, znakomicie ułatwia dokonywanie zakupów w EMPiK. Polecam.</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Wiesław Karpiński</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Super aplikacja. Bardzo ułatwia zakupy z różnorodnymi formami dostawy i płatności. I jest większy wybór niż w sklepach stacjonarnych.</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Wiktoria Drozd</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Bardzo rozbudowana, przejrzysta aplikacja. Wszystko tam jest i każdy znajdzie coś dla siebie i na każdą kieszeń. Polecam. 😊 👍👍</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Agnieszka Paździora</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Super sprawa z taką możliwością zamówienia odbieram gotowe książki które na spokojnie wybieram w domu</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Aneta Gogacz</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Szybkie i wygodne zakupy nawet dla starszych osób . Bez problemów można złożyć zamówienie i nie prosić wnuków o pomoc .</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Danuta Piotrowska</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Aplikacja bardzo intuicyjna, wszystko dziala jak nalezy. Jest duzo dodatkowych promocji jak korzysta sie z aplikacji. Polecam w 100%</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Piotr Cieklinski</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Kompleksowa i profesjonalna obsługa. Szacunek dla ludzi głodnych wiedzy i emocji. Obsługujący bardzo przyjaźni i konkretni. Zamówienie łatwo złożyć, jak i otrzymać. Możliwość faktury elektronicznej. Tylko chce się przychodzić i korzystać, a niektóre zakupy, np. audiobooków, można zrobić na odległość. Ładny wystrój w salonie, ale oczywiście drogo. Co najbardziej cieszy, dużo rabatów na każdą okazję. Perfekcja...</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Mateusz Markowski</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Bardzo wygodna i przejrzysta ponadto często pokazuje książki na które sama bym nie wpadła ,a są np. idealnym prezentem urodzinowym dla mojego braciszka.Korzystam z niej o dla i nigdy nie miałam z nią problemu.</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Tysia</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Ciekawa i lekka w działaniu aplikacja typu sklep, łatwo się szuka i kupuje. Wygląd aplikacji coraz lepszy, dużo produktów w średnich cenach, produkty profesjonalnie zaprezentowane.</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Mirosław Zieliński</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Bardzo wygodny sposób kupowania książek. Można spokojnie poszukać tego co nas interesuje siedząc na kanapie w domu, a potem odebrać bez kosztów wysyłki w wybranym salonie. Korzystam i polecam :)</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Agnieszka Kobusinska</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Duże zadowolenie z zakupów mam aplikacja to ułatwienie zachęta do szybkiej decyzji</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Dorota Tkaczyk</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Bardzo przydatna aplikacja! Wszystko jest bardzo łatwe w obsłudze i jak do tąd, jeśli zobaczyłam jakiś błąd bardzo szybko został on naprawiony (na przykład jeszcze wczoraj ceny się zmieniły na bardzo duże a już dziś ten błąd zniknął). Polecam aplikację dla stałych klientów empika:)</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Aleksandra Janiak</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Układ stron jest przejrzysty, bardzo łatwo szuka się produktów. Duży wybór towarów w korzystnych cenach zachęca do zakupów</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Agata G</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Łatwe wyszukiwanie, duży wybór metod płatności i dostawy. Ogólnie sprawne zakupy.</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Joanna</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Aplikacja działa poprawnie. Jest fajnym sposobem kupowania książek. Empik w aplikacji ma wiele promocji.</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Aleksandra</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Świetna bezproblema aplikacja. Często z niej korzystam. Szybko zamówisz i odbierzesz w sklepie</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">jolanta semik</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-opinion__boxes__item">
+                <p class="app-opinion__boxes__item__text">Wszystko działa jak powinno. Na start jest 10 złotych rabatu a jak wybierzemy salon empiku jako punkt odbioru mamy minus 20 procent do wykorzystania w tym salonie. To się opłaca! :)</p>
+
+                <div class="app-opinion__boxes__item-bottom">
+                    <span class="app-opinion__boxes__item-bottom__sign">Jaro Zak</span>
+                    <div class="app-opinion__boxes__item-bottom__stars">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+                        <img src="https://media.empik.com/content/lps/app-2022/opinion/full-star-2.svg" alt="złota gwiazdka" class="app-opinion__boxes__item-bottom__star">
+
+                        <span class="app-opinion__boxes__item-bottom__number">5</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="app-opinion-arrow-bg app-opinion-arrow-bg--left app-opinion-arrow-bg--disabled"></div>
+        <div class="app-opinion-arrow app-opinion-arrow--prev app-opinion-arrow--disabled">
+            <img class="app-opinion-arrow__img"
+                 src="https://media.empik.com/content/lps/app-2022/opinion/arrow.svg"
+                 alt="strzałka do przesuwania elementów suwaka do tyłu">
+        </div>
+        <div class="app-opinion-arrow-bg app-opinion-arrow-bg--right"></div>
+
+        <div class="app-opinion-arrow app-opinion-arrow--next">
+            <img class="app-opinion-arrow__img"
+            src="https://media.empik.com/content/lps/app-2022/opinion/arrow.svg"
+            alt="strzałka do przesuwania elementów suwaka do przodu">
+        </div>
+
+    </div>
+</section>

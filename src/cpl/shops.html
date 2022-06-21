@@ -1,0 +1,176 @@
+<style>
+    /*easier shopping*/
+    .app-shop-container {
+        margin: 0 auto;
+        padding: 56px 56px 0;
+        max-width: 1440px;
+    }
+
+    .app-shop {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .app-shop__title {
+        margin: 0 0 32px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #242424;
+    }
+
+    .app-shop__boxes {
+        position: relative;
+        display: flex;
+    }
+
+    .app-shop__boxes-column {
+        display: flex;
+        flex-direction: column;
+        margin-right: 16px;
+        max-width: 49%;
+    }
+
+    .app-shop__boxes-column__box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        padding: 28px 32px;
+        width: 432px;
+        max-width: 100%;
+        border-radius: 8px;
+        background: linear-gradient(0deg, rgba(255, 224, 204, 0.5), rgba(255, 224, 204, 0.5)), linear-gradient(91.26deg, rgba(255, 224, 204, 0.8) 0%, rgba(252, 206, 210, 0.8) 100%);
+        overflow: hidden;
+    }
+
+    .app-shop__boxes-column__box-test {
+        margin: 0 0 0 22px;
+        font-size: 16px;
+        color: #242424;
+    }
+
+    .app-shop__img {
+        z-index: 2;
+    }
+
+    .app-shop__img--desktop {
+        margin-top: 22px;
+        max-width: 100%;
+    }
+
+    .app-shop__img--mobile {
+        display: none;
+    }
+
+    @media (max-width: 1051px) {
+        .app-shop {
+            flex-direction: column;
+        }
+
+        .app-shop__boxes {
+            justify-content: space-between;
+        }
+
+        .app-shop__boxes-column {
+            margin-right: 0;
+        }
+
+        .app-shop__img--desktop {
+            margin: 0 auto;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 935px) {
+        .app-shop__boxes-column__box {
+            min-height: 102px;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .app-shop-container {
+            padding: 0 16px 16px;
+        }
+
+        .app-shop__title {
+            font-size: 24px;
+        }
+
+        .app-shop__boxes {
+            justify-content: center;
+        }
+
+        .app-shop__boxes-column--margin {
+            margin-right: 16px;
+        }
+
+        .app-shop__boxes-column__box {
+            flex-direction: column;
+            justify-content: center;
+            padding: 16px;
+            min-height: 176px;
+        }
+
+        .app-shop__boxes-column__box-test {
+            margin: 20px 0 0;
+            text-align: center;
+        }
+
+        .app-shop__img--desktop {
+            display: none;
+        }
+
+        .app-shop__img--mobile {
+            display: block;
+            margin-top: 32px;
+            width: 112%;
+            margin-left: -16px;
+        }
+    }
+</style>
+
+<section class="app-shop-container">
+    <h2 class="app-shop__title">Łatwiejsze zakupy w salonie</h2>
+    <div class="app-shop">
+        <div class="app-shop__boxes">
+
+            <div class="app-shop__boxes-column app-shop__boxes-column--margin">
+                <div class="app-shop__boxes-column__box">
+                    <img src="https://media.empik.com/content/lps/app-2022/shop/Timer.svg" alt="ikona timera" class="app-shop__boxes-column__box-icon">
+                    <p class="app-shop__boxes-column__box-test">Zamów i odbierz w salonie za 2 godziny</p>
+                </div>
+
+                <div class="app-shop__boxes-column__box">
+                    <img src="https://media.empik.com/content/lps/app-2022/shop/Mobile.svg" alt="ikona telefonu" class="app-shop__boxes-column__box-icon">
+                    <p class="app-shop__boxes-column__box-test">Łatwe rozpoznawanie apki w salonie</p>
+                </div>
+
+                <div class="app-shop__boxes-column__box">
+                    <img src="https://media.empik.com/content/lps/app-2022/shop/MapPin.svg" alt="ikona lokalizacji" class="app-shop__boxes-column__box-icon">
+                    <p class="app-shop__boxes-column__box-test">Dodaj swój ulubiony salon</p>
+                </div>
+            </div>
+
+            <div class="app-shop__boxes-column">
+                <div class="app-shop__boxes-column__box">
+                    <img src="https://media.empik.com/content/lps/app-2022/shop/CheckCircle.svg" alt="ikona check" class="app-shop__boxes-column__box-icon">
+                    <p class="app-shop__boxes-column__box-test">20% rabat na kolejne zakupy w salonie</p>
+                </div>
+
+                <div class="app-shop__boxes-column__box">
+                    <img src="https://media.empik.com/content/lps/app-2022/shop/Barcode.svg" alt="ikona kodu kreskowego" class="app-shop__boxes-column__box-icon">
+                    <p class="app-shop__boxes-column__box-test">Skanuj kod kreskowy i kupuj</p>
+                </div>
+
+                <div class="app-shop__boxes-column__box">
+                    <img src="https://media.empik.com/content/lps/app-2022/shop/CreditCard.svg" alt="ikona karty kredytowej" class="app-shop__boxes-column__box-icon">
+                    <p class="app-shop__boxes-column__box-test">Pay&Go - kupuj bez podchodzenia do kasy</p>
+                </div>
+            </div>
+
+        </div>
+
+        <img src="https://media.empik.com/content/lps/app-2022/shop/shop-img.svg" alt="grafika z salonami" class="app-shop__img app-shop__img--desktop">
+        <img src="https://media.empik.com/content/lps/app-2022/shop/mobile-img.svg" alt="grafika z salonami" class="app-shop__img app-shop__img--mobile">
+    </div>
+
+</section>

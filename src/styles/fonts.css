@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'empik';
+  src: url(../assets/fonts/empikProV-Regular.woff);
+}
+
+@font-face {
+  font-family: 'empik-bold';
+  src: url(../assets/fonts/empikProV-Bold.woff);
+}
+
+@font-face {
+  font-family: 'empik-black';
+  src: url(../assets/fonts/empikProV-Black.woff);
+}
+
+/* font przygotowany pod Bestsellery Empiku 2020 */
+
+@font-face {
+  font-family: 'empik-bests';
+  src: url(../assets/fonts/BE-rabbit.woff);
+}
+
+@font-face {
+  font-family: 'empik-bests-bold';
+  src: url(../assets/fonts/BE-rabbit-Bold.woff);
+}

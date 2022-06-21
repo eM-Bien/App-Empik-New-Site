@@ -1,0 +1,150 @@
+<style>
+    /* button download */
+    .scroll-to-top {
+        display: none;
+    }
+
+    .app-download {
+        display: none;
+        position: fixed;
+        bottom: 108px;
+        right: 16px;
+        height: 200px;
+        width: 250px;
+        z-index: 30;
+    }
+
+    .app-download__box {
+        position: fixed;
+        bottom: 176px;
+        right: 56px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 24px 16px;
+        width: 200.38px;
+        height: 412.48px;
+        background-color: #fff;
+        border-radius: 8px;
+        border: 1.4px solid #E1E3E5;
+        box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        z-index: 20;
+        transition: 0.9s;
+    }
+
+    .app-download__box__head {
+        display: flex;
+        margin-bottom: 16px;
+    }
+
+    .app-download__box__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        padding: 16px 4px;
+        max-width: 47px;
+        max-height: 47px;
+        border-radius: 8px;
+        border: 1.47px #E1E3E5 solid;
+    }
+
+    .app-download__box__opinion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .app-download__box__qr {
+        margin-bottom: 16px;
+    }
+
+    .app-download__box__btn-icon {
+        margin-bottom: 8px;
+    }
+
+    .app-download__btn {
+        position: fixed;
+        bottom: 108px;
+        right: 56px;
+        padding: 12px 40px;
+        width: 131px;
+        color: #fff;
+        font-size: 16px;
+        background: #000;
+        border-radius: 32px;
+        border: none;
+    }
+
+    .section-visible {
+        display: block;
+    }
+
+    .app-download:hover .app-download__box {
+        display: flex;
+    }
+
+    @media (max-width: 500px) {
+        .app-download {
+            bottom: 45px;
+        }
+
+        .app-download__box {
+            bottom: 116px;
+        }
+
+        .app-download__btn {
+            bottom: 50px;
+        }
+    }
+</style>
+
+<div class="app-download">
+    <div class="app-download__box">
+        <div class="app-download__box__head">
+            <div class="app-download__box__logo">
+                <img src="https://media.empik.com/content/lps/app-2022/head/logo-empik.svg" alt="logo Empik"
+                    class="app-download__box__logo-img">
+            </div>
+
+            <div class="app-download__box__opinion">
+                <div class="app-download__box__stars">
+                    <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka"
+                        class="app-download__box__star">
+                    <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka"
+                        class="app-download__box__star">
+                    <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka"
+                        class="app-download__box__star">
+                    <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka"
+                        class="app-download__box__star">
+                    <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka"
+                        class="app-download__box__star">
+                </div>
+                <span class="app-download__box__opinion-text">(+100tys. opinii)</span>
+            </div>
+        </div>
+
+        <img src="https://media.empik.com/content/lps/app-2022/download/qr-bottom.svg" alt="qr kod"
+            class="app-download__box__qr">
+
+        <div class="app-download__box__btns">
+            <a
+                href="https://mojempik.app.link/Vza5Jg7kDqb"><img
+                    src="https://media.empik.com/content/lps/app-2022/download/gp.svg" alt="ikona Google Play"
+                    class="app-download__box__btn-icon"></a>
+            <a
+                href="https://mojempik.app.link/beJguOEkDqb"><img
+                    src="https://media.empik.com/content/lps/app-2022/download/app-store.svg" alt="ikona App Store"
+                    class="app-download__box__btn-icon"></a>
+            <a
+                href="https://mojempik.app.link/yACIYjzkDqb"><img
+                    src="https://media.empik.com/content/lps/app-2022/download/app-gal.svg" alt="ikona AppGallery"
+                    class="app-download__box__btn-icon"></a>
+        </div>
+    </div>
+
+    <button class="app-download__btn">Pobierz</button>
+
+</div>

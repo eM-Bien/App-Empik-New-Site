@@ -1,0 +1,430 @@
+<style>
+    /* HEADER */
+    .app-header-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 1440px;
+        margin: 0 auto;
+    }
+
+    .app-header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .app-header__text {
+        margin: 56px 0 197px 56px;
+        color: #000;
+        width: 50%;
+        z-index: 3;
+    }
+
+    .app-header__text__nav {
+        margin-bottom: 128px;
+    }
+
+    .app-header__text__nav-item {
+        margin-right: 24px;
+        font-size: 16px;
+        color: #000;
+    }
+
+    .app-header__text__main {
+        margin-bottom: 24px;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 71px;
+    }
+
+    .app-header__text__about {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+
+    .app-header__text__about-item {
+        display: flex;
+        align-items: center;
+        margin: 0 16px 16px 0;
+        padding: 8px 16px;
+        border-radius: 4px;
+    }
+
+    .app-header__text__about-item--bg1 {
+        background: linear-gradient(92.89deg, rgba(250, 161, 97, 0.3) 0%, rgba(255, 175, 171, 0.3) 100%);
+    }
+
+    .app-header__text__about-item--bg2 {
+        background: linear-gradient(93.28deg, rgba(250, 161, 97, 0.2) 0.68%, rgba(255, 175, 171, 0.2) 100%);
+    }
+
+    .app-header__text__about-item--bg3 {
+        background: linear-gradient(91.07deg, rgba(250, 161, 97, 0.2) 0%, rgba(255, 175, 171, 0.2) 100%);
+    }
+
+    .app-header__text__about-btn-mobile {
+        display: none;
+    }
+
+    .app-header__text__about-text {
+        margin: 0;
+        padding-left: 11px;
+        font-size: 16px;
+    }
+
+    .app-header__text__about-text--mobile {
+        display: none;
+    }
+
+    .app-header__text__download-icon {
+        margin: 16px 16px 0 0;
+    }
+
+    .app-header__graph {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 56px 56px 48px 0;
+        width: 50%;
+    }
+
+    .app-header__graph__splash-desktop {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+    .app-header__graph__splash-mobile {
+        display: none;
+    }
+
+    .app-header__graph__phone {
+        width: 100%;
+        height: 100%;
+        background-image: url("https://media.empik.com/content/lps/app-2022/head/iPhone_2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: -128px;
+        z-index: 2;
+    }
+
+    .app-header__graph__phone-mobile {
+        display: none;
+    }
+
+    .app-header__graph__wrapper {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        left: 123px;
+        bottom: 100px;
+    }
+
+    .app-header__graph__qr-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 203.38px;
+        max-height: 253.48px;
+        border-radius: 8px;
+        border: 1.47px #E1E3E5 solid;
+        background-color: #fff;
+        padding: 24px;
+        box-shadow: 0px 4.42122px 4.42122px rgba(19, 42, 54, 0.18), 0px 4.42122px 22.1061px rgba(19, 42, 54, 0.11);
+        z-index: 3;
+    }
+
+    .app-header__graph__qr-wrapper__box {
+        display: flex;
+        align-items: center;
+    }
+
+    .app-header__graph__qr-wrapper__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        padding: 16px 4px;
+        max-width: 47px;
+        max-height: 47px;
+        border-radius: 8px;
+        border: 1.47px #E1E3E5 solid;
+    }
+
+    .app-header__graph__qr-wrapper__opinion-text {
+        font-size: 14px;
+        color: #717F83;
+    }
+
+    .app-header__graph__qr {
+        margin-top: 14px;
+        max-height: 156.22px;
+    }
+
+    @media (max-width: 1355px) {
+        .app-header__graph__splash-desktop {
+            right: -125px;
+        }
+    }
+
+    @media (max-width: 1051px) {
+        .app-header__text {
+            margin-bottom: 130px;
+        }
+
+        .app-header__text__nav {
+            margin-bottom: 45px;
+        }
+
+        .app-header__text__main {
+            font-size: 48px;
+            line-height: 66px;
+        }
+
+        .app-header__graph__phone {
+            display: none;
+            background: none;
+        }
+
+        .app-header__graph__phone-mobile {
+            display: block;
+            margin-right: -38px;
+            max-width: 90%;
+            z-index: 2;
+        }
+
+        .app-header__graph__splash-desktop {
+            right: -335px;
+        }
+
+        .app-header__graph__wrapper {
+            left: 80px;
+        }
+    }
+
+    @media (max-width: 856px) {
+        .app-header__text {
+            margin-left: 16px;
+        }
+
+        .app-header__text__main {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        .app-header__graph {
+            margin-right: 16px;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .app-bg-general {
+            background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0.78) 26.04%, rgba(255, 255, 255, 0) 73.54%), linear-gradient(138.55deg, #FFE1CC 30.34%, #FBC8D4 64.12%);
+        }
+
+        .app-header-container {
+            flex-direction: column;
+            max-width: 100%;
+        }
+
+        .app-header__text br {
+            display: none;
+        }
+
+        .app-header__text {
+            margin: 40px 0 48px 16px;
+            width: 95%;
+        }
+
+        .app-header__text__main {
+            margin: 0 0 32px;
+        }
+
+        .app-header__text__nav,
+        .app-header__text__download {
+            display: none;
+        }
+
+        .app-header__text__about {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        .app-header__text__about-item {
+            width: 100%;
+            max-width: -webkit-max-content;
+            max-width: -moz-max-content;
+            max-width: max-content;
+        }
+
+        .app-header__text__about-text--desktop {
+            display: none;
+        }
+
+        .app-header__text__about-text--mobile {
+            display: flex;
+        }
+
+        .app-header__text__about-text--mobile-star {
+            margin: 0 3.5px;
+        }
+
+        .app-header__text__about-text--mobile-star--first {
+            margin-left: 10px;
+        }
+
+        .app-header__text__about-btn-mobile {
+            display: block;
+            margin-top: 16px;
+            padding: 8px 16px;
+            max-width: -webkit-max-content;
+            max-width: -moz-max-content;
+            max-width: max-content;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            background-color: #242424;
+        }
+
+        .app-header__graph {
+            margin: 0;
+            width: 100%;
+        }
+
+        .app-header__graph__splash-desktop,
+        .app-header__graph__wrapper {
+            display: none;
+        }
+
+        .app-header__graph__splash-mobile {
+            position: absolute;
+            display: block;
+            opacity: 0.5;
+        }
+
+        .app-header__graph__splash-mobile--1 {
+            top: 533px;
+            left: 0;
+        }
+
+        .app-header__graph__splash-mobile--2 {
+            top: 300px;
+            right: 0;
+        }
+
+        .app-header__graph__phone-mobile {
+            margin: 0;
+            width: 260px;
+            max-width: 100%;
+        }
+    }
+</style>
+
+<section class="app-header">
+    <div class="app-header-container">
+
+        <img src="https://media.empik.com/content/lps/app-2022/head/img-5.svg" alt="rysunkowa gwiazdka" class="app-header-decor app-header-decor--1">
+        <img src="https://media.empik.com/content/lps/app-2022/head/img-dot.svg" alt="pomarańczowe kółko" class="app-header-decor app-header-decor--2">
+        <img src="https://media.empik.com/content/lps/app-2022/head/img-dot.svg" alt="pomarańczowe kółko" class="app-header-decor app-header-decor--3">
+        <img src="https://media.empik.com/content/lps/app-2022/head/img-dot-2.svg" alt="pomarańczowe kółko" class="app-header-decor app-header-decor--4">
+        <img src="https://media.empik.com/content/lps/app-2022/head/img-3.svg" alt="rysunkowa gwiazdka" class="app-header-decor app-header-decor--5">
+        <img src="https://media.empik.com/content/lps/app-2022/head/gwiazki1.svg" alt="rysunkowa gwiazdka" class="app-header-decor app-header-decor--6">
+        <img src="https://media.empik.com/content/lps/app-2022/head/gwiazdka2.svg" alt="rysunkowa gwiazdka" class="app-header-decor app-header-decor--7">
+
+        <div class="app-header__text">
+            <div class="app-header__text__nav">
+                <a href="#benefits" class="app-header__text__nav-item">Korzyści</a>
+                <a href="#opinion" class="app-header__text__nav-item">Opinie klientów</a>
+                <a href="#download" class="app-header__text__nav-item">Pobierz</a>
+            </div>
+
+            <h1 class="app-header__text__main">Miliony powodów,<br> aby pobrać aplikację Empik</h1>
+
+            <div class="app-header__text__about">
+                <div class="app-header__text__about-item app-header__text__about-item--bg1">
+                    <img src="https://media.empik.com/content/lps/app-2022/head/check.svg" alt="symbol potwierdzenia"
+                        class="app-header__text__about-icon">
+                    <p class="app-header__text__about-text app-header__text__about-text--desktop">Najlepiej oceniana aplikacja zakupowa w Polsce: 4,9 / 5
+                    </p>
+                    <p class="app-header__text__about-text app-header__text__about-text--mobile">Ocena 4,9 / 5 <img src="https://media.empik.com/content/lps/app-2022/head%20mobile/black-star.svg" alt="graficzna gwiazdka" class="app-header__text__about-text--mobile-star app-header__text__about-text--mobile-star--first">
+                        <img src="https://media.empik.com/content/lps/app-2022/head%20mobile/black-star.svg" alt="graficzna gwiazdka" class="app-header__text__about-text--mobile-star">
+                        <img src="https://media.empik.com/content/lps/app-2022/head%20mobile/black-star.svg" alt="graficzna gwiazdka" class="app-header__text__about-text--mobile-star">
+                        <img src="https://media.empik.com/content/lps/app-2022/head%20mobile/Star_half.svg" alt="graficzna gwiazdka" class="app-header__text__about-text--mobile-star">
+                        <img src="https://media.empik.com/content/lps/app-2022/head%20mobile/border-star.svg" alt="graficzna gwiazdka" class="app-header__text__about-text--mobile-star">
+                    </p>
+
+                </div>
+
+                <div class="app-header__text__about-item app-header__text__about-item--bg2">
+                    <img src="https://media.empik.com/content/lps/app-2022/head/check.svg" alt="symbol potwierdzenia"
+                        class="app-header__text__about-icon">
+                    <p class="app-header__text__about-text">3 miliony pobrań</p>
+                </div>
+
+                <div class="app-header__text__about-item app-header__text__about-item--bg3">
+                    <img src="https://media.empik.com/content/lps/app-2022/head/check.svg" alt="symbol potwierdzenia"
+                        class="app-header__text__about-icon">
+                    <p class="app-header__text__about-text">3 nagrody Mobile Trends Awards</p>
+                </div>
+
+                <a href="https://mojempik.app.link/Zj3T24BIzgb"><button class="app-header__text__about-btn-mobile">Pobierz</button></a>
+            </div>
+
+            <div class="app-header__text__download">
+                <a href="https://play.google.com/store/apps/details?id=com.empik.empikapp&referrer=utm_source=empik.com&utm_medium=button&utm_campaign=footer"><img src="https://media.empik.com/content/lps/app-2022/head/Download_on_google.svg" alt="ikona Google Play"
+                        class="app-header__text__download-icon"></a>
+                <a href="https://apps.apple.com/pl/app/empik/id1047654086?_branch_match_id=1051040002987975715&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz83PSs0tyMzWSywo0MvJzMvWz0kvN0tM9fR2ykkCAKruhTElAAAA"><img src="https://media.empik.com/content/lps/app-2022/head/Download_on_the_App_Store.svg" alt="ikona App Store"
+                        class="app-header__text__download-icon"></a>
+                <a href="https://appgallery.huawei.com/app/C100543553?sharePrepath=ag&channelId=EUPLHMS20200618EM&detailType=0"><img src="https://media.empik.com/content/lps/app-2022/head/Download_on_app.svg" alt="ikona AppGallery"
+                        class="app-header__text__download-icon"></a>
+            </div>
+        </div>
+
+        <img src="https://media.empik.com/content/lps/app-2022/head%20mobile/bg-left.svg" alt="kształt nierównej plamy w pomarańczowych odcieniach" class="app-header__graph__splash-mobile app-header__graph__splash-mobile--1">
+        <img src="https://media.empik.com/content/lps/app-2022/head%20mobile/bg-right.svg" alt="kształt nierównej plamy w pomarańczowych odcieniach" class="app-header__graph__splash-mobile app-header__graph__splash-mobile--2">
+
+        <so class="app-header__graph">
+            <img src="https://media.empik.com/content/lps/app-2022/head/img-main.svg" alt="kształt nierównej plamy w pomarańczowych odcieniach" class="app-header__graph__splash-desktop">
+
+            <div class="app-header__graph__wrapper">
+
+                <div class="app-header__graph__qr-wrapper">
+                    <div class="app-header__graph__qr-wrapper__box">
+                        <div class="app-header__graph__qr-wrapper__logo">
+                            <img src="https://media.empik.com/content/lps/app-2022/head/logo-empik.svg" alt="logo Empik" class="app-header__graph-qr-wrapper__logo-img">
+                        </div>
+
+                        <div class="app-header__graph__qr-wrapper__opinion">
+                            <div class="app-header__graph__qr-wrapper__stars">
+                                <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka" class="app-header__graph-qr-wrapper__star">
+                                <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka" class="app-header__graph-qr-wrapper__star">
+                                <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka" class="app-header__graph-qr-wrapper__star">
+                                <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka" class="app-header__graph-qr-wrapper__star">
+                                <img src="https://media.empik.com/content/lps/app-2022/head/img-4.svg" alt="pomarańczowa gwiadka" class="app-header__graph-qr-wrapper__star">
+                            </div>
+                            <span class="app-header__graph__qr-wrapper__opinion-text">(+100tys. opinii)</span>
+                        </div>
+
+                    </div>
+
+                    <img src="https://media.empik.com/content/lps/app-2022/head/qr-main.svg" alt="kod qr" class="app-header__graph__qr">
+
+                </div>
+            </div>
+
+            <picture class="app-header__graph__phone-mobile">
+                <source src="" type="image" media="(max-width: 1051px)" class="app-header__graph__phone-mobile">
+                <img src="https://media.empik.com/content/lps/app-2022/head/iPhone_2.png" alt="grafika telefonu z włączoną aplikacją" class="app-header__graph__phone-mobile">
+            </picture>
+
+            <div class="app-header__graph__phone"></div>
+
+        </div>
+    </div>
+</section>

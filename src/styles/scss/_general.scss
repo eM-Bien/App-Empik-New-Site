@@ -1,0 +1,20 @@
+/* ANKIETA OUT */
+#kampyleButtonContainer {
+    display: none;
+}
+
+/* INFO O INSTALACJI APKI OUT */
+#branch-banner-iframe {
+    display: none;
+}
+
+/* INFO O COOKIES OUT */
+[data-ta="cookies-banner"] {
+    display: none;
+}
+
+/* GENERAL STYLES */
+
+main {
+    background-color: var(--color-white);
+}

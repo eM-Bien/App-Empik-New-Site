@@ -1,0 +1,102 @@
+/* button download */
+.scroll-to-top {
+    display: none;
+}
+
+.app-download {
+    display: none;
+    position: fixed;
+    bottom: 108px;
+    right: 16px;
+    height: 200px;
+    width: 250px;
+    z-index: 30;
+
+    &__box {
+        position: fixed;
+        bottom: 176px;
+        right: 56px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 24px 16px;
+        width: 200.38px;
+        height: 412.48px;
+        background-color: #fff;
+        border-radius: 8px;
+        border: 1.4px solid #E1E3E5;
+        box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        z-index: 20;
+        transition: .9s;
+
+        &__head {
+            display: flex;
+            margin-bottom: 16px;
+        }
+
+        &__logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            padding: 16px 4px;
+            max-width: 47px;
+            max-height: 47px;
+            border-radius: 8px;
+            border: 1.47px #E1E3E5 solid;
+        }
+
+        &__opinion {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__qr {
+            margin-bottom: 16px;
+        }
+
+        &__btn-icon {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__btn {
+        position: fixed;
+        bottom: 108px;
+        right: 56px;
+        padding: 12px 40px;
+        width: 131px;
+        color: #fff;
+        font-size: 16px;
+        background: #000;
+        border-radius: 32px;
+        border: none;
+    }
+}
+
+.section-visible {
+    display: block;
+}
+
+.app-download:hover .app-download__box {
+    display: flex;
+}
+
+@media (max-width: 500px) {
+    .app-download {
+        bottom: 45px;
+        &__box {
+            bottom: 116px;
+        }
+
+        &__btn {
+            bottom: 50px;
+        }
+    }
+}
+
+
+

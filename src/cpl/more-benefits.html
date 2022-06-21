@@ -1,0 +1,137 @@
+<style>
+    /*more benefits*/
+    .app-more-benefits {
+        margin: 0 auto;
+        padding: 56px;
+        max-width: 1440px;
+    }
+
+    .app-more-benefits__title {
+        margin-bottom: 32px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #242424;
+    }
+
+    .app-more-benefits__boxes {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .app-more-benefits__boxes__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 36px 16px 16px;
+        width: 208px;
+        max-width: 16%;
+        min-height: 168px;
+        border-radius: 8px;
+        border: 1px solid #E7E7E7;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+    }
+
+    .app-more-benefits__boxes__item-text {
+        margin-top: 24px;
+        max-width: 95%;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #242424;
+    }
+
+    .app-more-benefits__boxes__item-text--mobile {
+        display: none;
+    }
+
+    @media (max-width: 950px) {
+        .app-more-benefits {
+            padding-top: 50px;
+        }
+
+        .app-more-benefits__boxes {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .app-more-benefits__boxes__item {
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-bottom: 16px;
+            padding: 16px;
+            max-width: 100%;
+            width: 100%;
+            height: 64px;
+            min-height: 64px;
+        }
+
+        .app-more-benefits__boxes__item-text br {
+            display: none;
+        }
+
+        .app-more-benefits__boxes__item-text {
+            margin: 0 0 0 22px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .app-more-benefits__boxes__item-text--desktop {
+            display: none;
+        }
+
+        .app-more-benefits__boxes__item-text--mobile {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .app-more-benefits {
+            margin-top: -134px;
+            padding: 16px;
+        }
+
+        .app-more-benefits__title {
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+    }
+</style>
+
+<section class="app-more-benefits">
+    <h2 class="app-more-benefits__title">Ale także</h2>
+    <div class="app-more-benefits__boxes">
+        <div class="app-more-benefits__boxes__item">
+            <img src="https://media.empik.com/content/lps/app-2022/more-benefits/ClockCounterClockwise.svg" alt="ikona zegara" class="app-more-benefits__boxes__item-icon">
+            <p class="app-more-benefits__boxes__item-text">Zwrot bez paragonu<br> do 30 dni</p>
+        </div>
+
+        <div class="app-more-benefits__boxes__item">
+            <img src="https://media.empik.com/content/lps/app-2022/more-benefits/Storefront.svg" alt="ikona sklepu" class="app-more-benefits__boxes__item-icon">
+            <p class="app-more-benefits__boxes__item-text">Odbiór w salonach<br> za 0 zł</p>
+        </div>
+
+        <div class="app-more-benefits__boxes__item">
+            <img src="https://media.empik.com/content/lps/app-2022/more-benefits/Handbag.svg" alt="ikona torby" class="app-more-benefits__boxes__item-icon">
+            <p class="app-more-benefits__boxes__item-text app-more-benefits__boxes__item-text--desktop">Ponad 3 mln produktów:<br> od książki, po AGD</p>
+            <p class="app-more-benefits__boxes__item-text app-more-benefits__boxes__item-text--mobile">Produkty od książki, po AGD</p>
+        </div>
+
+        <div class="app-more-benefits__boxes__item">
+            <img src="https://media.empik.com/content/lps/app-2022/more-benefits/HandPointing.svg" alt="ikona wskazującej ręki" class="app-more-benefits__boxes__item-icon">
+            <p class="app-more-benefits__boxes__item-text">Przyjazne i proste<br> składanie zamówień</p>
+        </div>
+
+        <div class="app-more-benefits__boxes__item">
+            <img src="https://media.empik.com/content/lps/app-2022/more-benefits/Info.svg" alt="ikona informacji" class="app-more-benefits__boxes__item-icon">
+            <p class="app-more-benefits__boxes__item-text app-more-benefits__boxes__item-text--desktop">Powiadomienia push<br> o stanie zamówienia</p>
+            <p class="app-more-benefits__boxes__item-text app-more-benefits__boxes__item-text--mobile">Śledzenie zamówienia</p>
+        </div>
+
+        <div class="app-more-benefits__boxes__item">
+            <img src="https://media.empik.com/content/lps/app-2022/more-benefits/MusicNotes.svg" alt="ikona nutek" class="app-more-benefits__boxes__item-icon">
+            <p class="app-more-benefits__boxes__item-text">Łatwy dostęp<br> do kultury i rozrywki</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+// variables podlinkowane tutaj, żeby był dostęp do zmiennych CSS w całym projekcie
+// żeby używać zmiennych SASS, trzeba podlinkować variables w innym _partialu
+@use './variables';
+
+@use './general';
+
+@use './this-one';
+
+@use './header';
+
+@use './header-decoration';
+
+@use './benefits';
+
+@use './more-benefits';
+
+@use './shop';
+
+@use './opinion';
+
+@use './technic';
+
+@use './footer';
+
+@use './download';

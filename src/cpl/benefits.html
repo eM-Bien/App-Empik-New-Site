@@ -1,0 +1,174 @@
+<style>
+    /*benefits*/
+    .app-benefits-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 56px;
+    }
+
+    .app-benefits {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .app-benefits__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px;
+        width: 432px;
+        max-width: 33%;
+        height: 618px;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    }
+
+    .app-benefits__item--middle {
+        min-height: 706px;
+    }
+
+    .app-benefits__item__wrapp-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65%;
+    }
+
+    .app-benefits__item__img {
+        max-height: 224px;
+        max-width: 100%;
+    }
+
+    .app-benefits__item__title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #242424;
+    }
+
+    .app-benefits__item__text {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #6F6F6F;
+    }
+
+    .app-benefits__item__steps-box {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background-color: #F8F8F8;
+    }
+
+    .app-benefits__item__steps-box__text {
+        margin: 0 0 0 16px;
+        font-size: 16px;
+        color: #242424;
+    }
+
+    @media (max-width: 950px) {
+        .app-benefits {
+            flex-direction: column;
+            z-index: 3;
+        }
+
+        .app-benefits__item {
+            width: 100%;
+            max-width: 100%;
+            min-height: 100%;
+            height: 100%;
+            margin-bottom: 16px;
+        }
+
+        .app-benefits__item--middle {
+            order: -1;
+        }
+
+        .app-benefits__item__img {
+            margin: 48px auto;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .app-benefits-container {
+            padding: 0 16px;
+        }
+
+        .app-benefits {
+            top: -157px;
+        }
+
+        .app-benefits__item {
+            padding: 40px 24px;
+        }
+
+        .app-benefits__item__img {
+            margin: 16px 0 48px 0;
+            max-width: 90%;
+        }
+
+        .app-benefits__item__title {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<section class="app-benefits-container">
+    <div id="benefits" class="app-benefits">
+
+        <div class="app-benefits__item">
+            <div class="app-benefits__item__wrapp-img">
+                <img src="https://media.empik.com/content/lps/app-2022/benefits/benef-1.svg" alt="zawieszka z procentem symbolizującym rabat" class="app-benefits__item__img">
+            </div>
+
+            <div class="app-benefits__item__wrapp-text">
+                <span class="app-benefits__item__title">Promocyjne rabaty</span>
+                <p class="app-benefits__item__text">Dedykowane, cotygodniowe akcje promocyjne dostępne tylko w aplikacji: zniżka 15% dla salonów, 20% dla zakupów online + dodatkowe.</p>
+            </div>
+        </div>
+
+        <div class="app-benefits__item app-benefits__item--middle">
+            <div class="app-benefits__item__wrapp-img">
+                <img src="https://media.empik.com/content/lps/app-2022/benefits/benef-2.svg" alt="grafika z 10 złotymi" class="app-benefits__item__img">
+            </div>
+
+            <div class="app-benefits__item__wrapp-text">
+                <span class="app-benefits__item__title">10 zł na start</span>
+                <p class="app-benefits__item__text">Z programem Empik Premium Free, otrzymasz 10 zł na pierwsze zakupy w aplikacji. To tylko 3 kroki:</p>
+                <div class="app-benefits__item__steps">
+                    <div class="app-benefits__item__steps-box">
+                        <img src="https://media.empik.com/content/lps/app-2022/benefits/no-1.svg" alt="kółko z numerem 1 w środku" class="app-benefits__item__steps-box__number">
+                        <p class="app-benefits__item__steps-box__text">Dołącz do programu Empik Premium Free</p>
+                    </div>
+
+                    <div class="app-benefits__item__steps-box">
+                        <img src="https://media.empik.com/content/lps/app-2022/benefits/no-2.svg" alt="kółko z numerem 2 w środku" class="app-benefits__item__steps-box__number">
+                        <p class="app-benefits__item__steps-box__text">Chwytaj za telefon, pobierz aplikację i zrób pierwsze zakupy</p>
+                    </div>
+
+                    <div class="app-benefits__item__steps-box">
+                        <img src="https://media.empik.com/content/lps/app-2022/benefits/no-3.svg" alt="kółko z numerem 3 w środku" class="app-benefits__item__steps-box__number">
+                        <p class="app-benefits__item__steps-box__text">Wpisz kod rabatowy <b>START10</b> i ciesz się oszczędnościami</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="app-benefits__item">
+            <div class="app-benefits__item__wrapp-img">
+                <img src="https://media.empik.com/content/lps/app-2022/benefits/benef-3.svg" alt="grafika z paczką" class="app-benefits__item__img">
+            </div>
+
+            <div class="app-benefits__item__wrapp-text">
+                <span class="app-benefits__item__title">Darmowa dostawa</span>
+                <p class="app-benefits__item__text">Dołączając do darmowego programu Empik Premium Free, możesz w pełni korzystać z darmowej dostawy do salonów oraz do paczkomatów od 60 zł, a w Empik Premium dostawy kurierem za 0zł.</p>
+            </div>
+
+        </div>
+    </div>
+</section>

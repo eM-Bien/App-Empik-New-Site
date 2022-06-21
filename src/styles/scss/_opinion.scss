@@ -1,0 +1,218 @@
+/* opinion */
+.app-opinion-container {
+    position: relative;
+    background-color: #FEF3F5;
+    z-index: 5;
+}
+
+.app-opinion {
+    position: relative;
+    margin: -95px auto 0;
+    padding: 56px;
+    max-width: 1440px;
+
+    &__title {
+        margin-bottom: 32px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #242424;
+
+        &--mobile {
+            display: none;
+        }
+    }
+
+    &__circle-mobile {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 32px;
+        padding: 27px;
+        width: 144px;
+        height: 144px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        &__text {
+            font-size: 36px;
+            font-weight: 700;
+            color: #000;
+
+            &--small {
+                margin-left: 5px;
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+
+        &__stars {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+
+        &__star {
+            margin: 0 2px;
+        }
+    }
+
+    &__boxes {
+        display: flex;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 16px;
+            padding: 32px 32px 25px;
+            width: 432px;
+            min-height: 238px;
+            border-radius: 8px;
+            border: 1px solid #E7E7E7;
+            background-color: #fff;
+            overflow: hidden;
+            flex-shrink: 0;
+
+            &__text {
+                margin-bottom: 20px;
+                font-size: 16px;
+                line-height: 24px;
+                color: #000;
+            }
+        }
+
+        &__item-bottom {
+            &__sign {
+                font-size: 16px;
+                line-height: 24px;
+                color: #6F6F6F;
+            }
+
+            &__stars {
+                display: flex;
+                align-items: center;
+                margin-top: 4px;
+            }
+
+            &__star {
+                margin-right: 7px;
+            }
+
+            &__number {
+                margin-top: 5px;
+                font-size: 16px;
+                color: #242424;
+            }
+        }
+    }
+}
+
+/* arrows */
+.app-opinion-arrow-bg {
+    position: absolute;
+    bottom: 0;
+    width: 208px;
+    height: 78%;
+    
+    &--right {
+        right: 0;
+        background: linear-gradient(269.6deg, #FEF3F5 35.19%, rgba(255, 255, 255, 0) 100.6%);
+    }
+
+    &--left {
+        left: 0;
+        background: linear-gradient(90deg, #FEF3F5 35.19%, rgba(255, 255, 255, 0) 100.6%);
+    }
+
+    &--disabled {
+        display: none;
+    }
+}
+
+.app-opinion-arrow {
+    position: absolute;
+    top: 57%;
+    transform: translateY(-50%);
+    padding: 10px 0 0 18px;
+    width: 40px;
+    height: 40px;
+    background-size: 14px 20px;
+    background-color: #242424;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 50%;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &--prev {
+        left: 5px;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    &--next {
+        right: 0;
+    }
+
+    &--disabled {
+        pointer-events: none;
+        display: none;
+    }
+
+    &__img {
+        width: 7.5px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 720px) {
+    .app-opinion {
+        padding: 40px 0 0 16px;
+
+        &__title {
+            &--desktop {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+                font-size: 24px;
+            }
+        }
+
+        &__circle-mobile {
+            display: flex;
+        }
+
+        &__boxes {
+            padding-bottom: 32px;
+            &__item {
+                max-width: 309px;
+                padding: 32px 24px;
+                border: none;
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+            }
+
+            &__item-bottom__stars {
+                margin-top: 2px;
+            }
+        }
+    }
+
+    .app-opinion-arrow-bg {
+        display: none;
+    }
+
+    .app-opinion-arrow {
+        display: none;
+    }
+}
+
+

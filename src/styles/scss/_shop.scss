@@ -1,0 +1,132 @@
+/*easier shopping*/
+.app-shop-container {
+    margin: 0 auto;
+    padding: 56px 56px 0;
+    max-width: 1440px;
+}
+
+.app-shop {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        margin: 0 0 32px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #242424;
+    }
+    
+    &__boxes {
+        position: relative;
+        display: flex;
+    }
+    
+    &__boxes-column {
+        display: flex;
+        flex-direction: column;
+        margin-right: 16px;
+        max-width: 49%;
+    
+        &__box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 28px 32px;
+            width: 432px;
+            max-width: 100%;
+            border-radius: 8px;
+            background: linear-gradient(0deg, rgba(255, 224, 204, 0.5), rgba(255, 224, 204, 0.5)), linear-gradient(91.26deg, rgba(255, 224, 204, 0.8) 0%, rgba(252, 206, 210, 0.8) 100%);
+            overflow: hidden;
+        }
+    
+        &__box-test {
+            margin: 0 0 0 22px;
+            font-size: 16px;
+            color: #242424;
+        }
+    }
+
+    &__img {
+        z-index: 2;
+        &--desktop {
+            margin-top: 22px;
+            max-width: 100%;
+        }
+        &--mobile {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1051px) {
+    .app-shop {
+        flex-direction: column;
+
+        &__boxes {
+            justify-content: space-between;
+        }
+
+        &__boxes-column {
+            margin-right: 0;
+        }
+
+        &__img--desktop {
+            margin: 0 auto;
+            max-width: 50%;
+        }
+    }
+}
+
+@media (max-width: 935px) {
+.app-shop__boxes-column__box {
+    min-height: 102px;
+}
+}
+
+@media (max-width: 720px) {
+    .app-shop-container {
+        padding: 0 16px 16px;
+    }
+
+    .app-shop {
+        &__title {
+            font-size: 24px;
+        }
+
+        &__boxes {
+            justify-content: center;
+        }
+
+        &__boxes-column {
+            &--margin {
+                margin-right: 16px;
+            }
+
+            &__box {
+                flex-direction: column;
+                justify-content: center;
+                padding: 16px;
+                min-height: 176px;
+            }
+
+            &__box-test {
+                margin: 20px 0 0;
+                text-align: center;
+            }
+
+        }
+
+        &__img {
+            &--desktop {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+                margin-top: 32px;
+                width: 112%;
+                margin-left: -16px;
+            }
+        }
+    }
+}

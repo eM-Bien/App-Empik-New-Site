@@ -1,0 +1,334 @@
+
+.app-bg-general {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1162px;
+    background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0.78) 26.04%, rgba(255, 255, 255, 0) 73.54%), linear-gradient(100.52deg, #FFE1CC 9.45%, #FBC8D4 77.87%);
+}
+/* HEADER */
+.app-header-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.app-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &__text {
+        margin: 56px 0 197px 56px;
+        color: #000;
+        width: 50%;
+        z-index: 3;
+
+        &__nav {
+            margin-bottom: 128px;
+        }
+
+        &__nav-item {
+            margin-right: 24px;
+            font-size: 16px;
+            color: #000;
+        }
+
+        &__main {
+            margin-bottom: 24px;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 71px;
+        }
+
+        &__about {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        &__about-item {
+            display: flex;
+            align-items: center;
+            margin: 0 16px 16px 0;
+            padding: 8px 16px;
+            border-radius: 4px;
+
+            &--bg1 {
+                background: linear-gradient(92.89deg, rgba(250, 161, 97, 0.3) 0%, rgba(255, 175, 171, 0.3) 100%);
+            }
+            &--bg2 {
+                background: linear-gradient(93.28deg, rgba(250, 161, 97, 0.2) 0.68%, rgba(255, 175, 171, 0.2) 100%);
+            }
+            &--bg3 {
+                background: linear-gradient(91.07deg, rgba(250, 161, 97, 0.2) 0%, rgba(255, 175, 171, 0.2) 100%);
+            }
+        }
+
+        &__about-btn-mobile {
+            display: none;
+        }
+        
+        &__about-text {
+            margin: 0;
+            padding-left: 11px;
+            font-size: 16px;
+
+            &--mobile {
+                display: none;
+            }
+        }
+
+        &__download-icon {
+            margin: 16px 16px 0 0;
+        }
+    }
+
+    &__graph {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 56px 56px 48px 0;
+        width: 50%;
+
+        &__splash-desktop {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+        }
+
+        &__splash-mobile {
+            display: none;
+        }
+
+        &__phone {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://media.empik.com/content/lps/app-2022/head/iPhone_2.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: -128px;
+            z-index: 2;
+        }
+
+        &__phone-mobile {
+            display: none;
+        }
+
+        &__wrapper {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            left: 123px;
+            bottom: 100px;
+        }
+        
+        &__qr-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 203.38px;
+            max-height: 253.48px;
+            border-radius: 8px;
+            border: 1.47px #E1E3E5 solid;
+            background-color: #fff;
+            padding: 24px;
+            box-shadow: 0px 4.42122px 4.42122px rgba(19, 42, 54, 0.18), 0px 4.42122px 22.1061px rgba(19, 42, 54, 0.11);
+            z-index: 3;
+            
+            &__box {
+                display: flex;
+                align-items: center;
+            }
+
+            &__logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+                padding: 16px 4px;
+                max-width: 47px;
+                max-height: 47px;
+                border-radius: 8px;
+                border: 1.47px #E1E3E5 solid;
+            }
+
+            &__opinion-text {
+                font-size: 14px;
+                color: #717F83;
+            }
+        }
+
+        &__qr {
+            margin-top: 14px;
+            max-height: 156.22px;
+        }
+    }
+}
+
+@media (max-width: 1355px) {
+    .app-header__graph__splash-desktop {
+        right: -125px;
+    }
+}
+
+@media (max-width: 1051px) {
+    .app-header {
+        &__text {
+            margin-bottom: 130px;
+        
+            &__nav {
+                margin-bottom: 45px;
+            }
+
+            &__main {
+                font-size: 48px;
+                line-height: 66px;
+            }
+        }
+
+        &__graph {
+            &__phone {
+                display: none;
+                background: none;
+            }
+
+            &__phone-mobile {
+                display: block;
+                margin-right: -38px;
+                max-width: 90%;
+                z-index: 2;
+            }
+            &__splash-desktop {
+                right: -335px;
+            }
+
+            &__wrapper {
+                left: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 856px) {
+    .app-header {
+        &__text {
+            margin-left: 16px;
+
+            &__main {
+                font-size: 32px;
+                line-height: 40px;
+            }
+        }
+
+        &__graph {
+            margin-right: 16px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .app-bg-general {
+        background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0.78) 26.04%, rgba(255, 255, 255, 0) 73.54%), linear-gradient(138.55deg, #FFE1CC 30.34%, #FBC8D4 64.12%);
+    }
+    .app-header-container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .app-header {
+        &__text br {
+            display: none;
+        }
+
+        &__text {
+            margin: 40px 0 48px 16px;
+            width: 95%;
+
+            &__main {
+                margin: 0 0 32px;
+            }
+
+            &__nav, &__download {
+                display: none;
+            }
+
+            &__about {
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+
+            &__about-item {
+                width: 100%;
+                max-width: max-content;
+            }
+
+            &__about-text {
+                &--desktop {
+                    display: none;
+                }
+
+                &--mobile {
+                    display: flex;
+                }
+
+                &--mobile-star {
+                    margin: 0 3.5px;
+
+                    &--first {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            &__about-btn-mobile {
+                display: block;
+                margin-top: 16px;
+                padding: 8px 16px;
+                max-width: max-content;
+                color: #fff;
+                font-size: 16px;
+                text-align: center;
+                border: none;
+                border-radius: 4px;
+                background-color: #242424;
+            }
+        }
+
+        &__graph {
+            margin: 0;
+            width: 100%;
+
+            &__splash-desktop, &__wrapper {
+                display: none;
+            }
+
+            &__splash-mobile {
+                position: absolute;
+                display: block;
+                opacity: .5;
+
+                &--1 {
+                    top: 533px;
+                    left: 0;
+                }
+
+                &--2 {
+                    top: 300px;
+                    right: 0;
+                }
+            }
+
+            &__phone-mobile {
+                margin: 0;
+                width: 260px;
+                max-width: 100%;
+            }
+        }
+    }
+}

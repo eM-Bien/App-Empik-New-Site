@@ -1,0 +1,165 @@
+<style>
+    /* technic */
+    .app-technic {
+        margin: 0 auto;
+        padding: 56px;
+        max-width: 1440px;
+    }
+
+    .app-technic__title {
+        margin-bottom: 32px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #242424;
+    }
+
+    .app-technic-wrapp {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .app-technic-box {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .app-technic-box--border {
+        padding-right: 56px;
+        border-right: 1px solid #B2B2B2;
+    }
+
+    .app-technic-box--padding {
+        padding-left: 56px;
+    }
+
+    .app-technic-box__title {
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #242424;
+    }
+
+    .app-technic-box__text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .app-technic-box__text__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app-technic-box__text__column-title {
+        margin: 0;
+        font-size: 18px;
+        color: #6F6F6F;
+    }
+
+    .app-technic-box__text__column-subtitle {
+        margin: 0;
+        font-size: 18px;
+        color: #242424;
+    }
+
+    @media (max-width: 950px) {
+        .app-technic-wrapp {
+            flex-direction: column;
+        }
+
+        .app-technic-box {
+            width: 100%;
+        }
+
+        .app-technic-box--border {
+            padding: 0 0 24.5px;
+            border-right: none;
+            border-bottom: 1px solid #E7E7E7;
+        }
+
+        .app-technic-box--padding {
+            padding: 24.5px 0 0;
+        }
+
+        .app-technic-box__text__column--order {
+            order: -1;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .app-technic {
+            padding: 40px 16px;
+        }
+
+        .app-technic__title {
+            margin: 0 0 24px;
+            font-size: 26px;
+        }
+
+        .app-technic-box__title {
+            margin-bottom: 16px;
+            font-size: 21px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .app-technic-box__text__column--hide {
+            display: none;
+        }
+
+        .app-technic-box__text__column {
+            padding-right: 40px;
+        }
+    }
+</style>
+
+<section class="app-technic">
+    <h2 class="app-technic__title">Dane techniczne</h2>
+
+    <div class="app-technic-wrapp">
+
+        <div class="app-technic-box app-technic-box--border">
+            <p class="app-technic-box__title">Android</p>
+
+            <div class="app-technic-box__text">
+                <div class="app-technic-box__text__column">
+                    <p class="app-technic-box__text__column-title">Wielkość</p>
+                    <p class="app-technic-box__text__column-subtitle">67 MB</p>
+                </div>
+
+                <div class="app-technic-box__text__column app-technic-box__text__column--order">
+                    <p class="app-technic-box__text__column-title">System</p>
+                    <p class="app-technic-box__text__column-subtitle">Android 10 lub nowszy</p>
+                </div>
+
+                <div class="app-technic-box__text__column app-technic-box__text__column--hide">
+                    <p class="app-technic-box__text__column-title">Język</p>
+                    <p class="app-technic-box__text__column-subtitle">Polski</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-technic-box app-technic-box--padding">
+            <p class="app-technic-box__title">iOS</p>
+
+            <div class="app-technic-box__text">
+                <div class="app-technic-box__text__column">
+                    <p class="app-technic-box__text__column-title">Wielkość</p>
+                    <p class="app-technic-box__text__column-subtitle">65 MB</p>
+                </div>
+
+                <div class="app-technic-box__text__column app-technic-box__text__column--order">
+                    <p class="app-technic-box__text__column-title">System</p>
+                    <p class="app-technic-box__text__column-subtitle">iOS 12.0 lub nowszy</p>
+                </div>
+
+                <div class="app-technic-box__text__column app-technic-box__text__column--hide">
+                    <p class="app-technic-box__text__column-title">Język</p>
+                    <p class="app-technic-box__text__column-subtitle">Polski</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

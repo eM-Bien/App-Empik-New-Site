@@ -1,0 +1,60 @@
+.app-header-decor {
+    position: absolute;
+    
+    &--1 {
+        top: 100px;
+        left: 30px;
+    }
+
+    &--2 {
+        top: 138px;
+        left: 85px;
+        opacity: .5;
+    }
+
+    &--3 {
+        top: 170px;
+        left: 60px;
+        opacity: .5;
+    }
+
+    &--4 {
+        top: 165px;
+        left: 85px;
+        opacity: .5;
+    }
+
+    &--5 {
+        top: 102px;
+        left: 44%;
+    }
+
+    &--6 {
+        top: 573px;
+        left: -76px;
+    }
+
+    &--7 {
+        top: 484px;
+        right: -60px;
+        opacity: .1;
+    }
+}
+
+@media (max-width: 1051px) {
+    .app-header-decor {
+        &--2, &--3, &--4, &--7 {
+            display: none;
+        }
+
+        &--5 {
+            left: 53%;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .app-header-decor {
+        display: none;
+    }
+}

@@ -1,0 +1,115 @@
+/* technic */
+.app-technic {
+    margin: 0 auto;
+    padding: 56px;
+    max-width: 1440px;
+
+    &__title {
+        margin-bottom: 32px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #242424;
+    }
+}
+
+.app-technic-wrapp {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.app-technic-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &--border {
+        padding-right: 56px;
+        border-right: 1px solid #B2B2B2;;
+    }
+
+    &--padding {
+        padding-left: 56px;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #242424;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+
+        &__column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__column-title {
+            margin: 0;
+            font-size: 18px;
+            color: #6F6F6F;
+        }
+
+        &__column-subtitle {
+            margin: 0;
+            font-size: 18px;
+            color: #242424;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .app-technic-wrapp {
+        flex-direction: column;
+    }
+
+    .app-technic-box {
+        width: 100%;
+
+        &--border {
+            padding: 0 0 24.5px;
+            border-right: none;
+            border-bottom: 1px solid #E7E7E7;
+        }
+
+        &--padding {
+            padding: 24.5px 0 0;
+        }
+
+        &__text__column--order {
+            order: -1;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .app-technic {
+        padding: 40px 16px;
+
+        &__title {
+            margin: 0 0 24px;
+            font-size: 26px;
+        }
+    }
+
+    .app-technic-box {
+        &__title {
+            margin-bottom: 16px;
+            font-size: 21px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .app-technic-box__text__column--hide {
+        display: none;
+    }
+
+    .app-technic-box__text__column {
+        padding-right: 40px;
+    }
+}
